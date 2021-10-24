@@ -1,4 +1,5 @@
 void mousePressed(){
+  crank.play();
   if (on_button()){
     
     if (left.is_active==true){
