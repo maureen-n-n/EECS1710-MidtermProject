@@ -2,21 +2,26 @@
     ------------ Slot Machine ----------------
     For the one button game midterm project, I decided to emulate a simple slot machine.
     The slots have six symbols: banana, cherry, lemon, orange, watermelon and seven.
-    If the player
+    
+    Please read the README file on Github to see the different outcomes!
+    
     sound credits:
     bgm.wav - https://www.youtube.com/watch?v=DCTggKrpMWs&t=26s&ab_channel=SirBaki
     crank.wav - https://www.youtube.com/watch?v=0jG6lNj2foM&ab_channel=DDosKey
     aww.wav - https://www.youtube.com/watch?v=cJJBtAVwz0c&ab_channel=SoundEffectDatabase
     kaching.wav - https://www.youtube.com/watch?v=4kVTqUxJYBA&ab_channel=GamingSoundFX
     coin.wav - https://www.youtube.com/watch?v=MFm2OAQ4sOQ&ab_channel=GFXSounds
-    jackpot.wav - https://www.youtube.com/watch?v=UpkC0vMxdDU&ab_channel=SoundLibrary
-    
+    jackpot.wav - https://www.youtube.com/watch?v=UpkC0vMxdDU&ab_channel=SoundLibrary   
 **/
+
+// Importing and initializing the sound library and variables
 import processing.sound.*;
 SoundFile bgm, crank, aww, kaching, coin, jackpot;
 
-PFont font;
+// Initialize three instances of the Slot class
 Slot left, middle, right;
+
+PFont font;
 PImage background, background2;
 String[] symbolURLs = {"banana.png", "cherry.png", "lemon.png", "orange.png", "watermelon.png", "seven.png"};
 int[] outcomes = new int[3];
@@ -60,9 +65,6 @@ void setup() {
 }
 
 void draw(){
-  //fill(0, 0, 255);
-  //ellipse(1290, 145, 200, 200);
-  
   if (mousePressed && on_button()){
     image(background2, 0, 0);
   } else {
@@ -90,6 +92,5 @@ void draw(){
   
   image(symbols[right.current_symbol], width - 470, height/3);
   right.choose_symbol();
-  
   
 }

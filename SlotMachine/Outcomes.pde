@@ -1,5 +1,4 @@
 void outcome(){ 
-  /** **/
   if (left.is_active == false && middle.is_active == false && right.is_active == false){
     if (outcomes[0] == outcomes[1] && outcomes[0] == outcomes[2]){
       // all three slots are the same!
@@ -10,7 +9,6 @@ void outcome(){
         jackpot.play();
         
       } else {
-        println("all fruit");
         screen_text = "+50 POINTS";
         score +=50;
         kaching.play();
@@ -20,7 +18,6 @@ void outcome(){
       
     } else if (outcomes[0] == outcomes[1] || outcomes[0] == outcomes[2] || outcomes[1] == outcomes[2]) {
       // only one pair
-      println("only one pair ");
       if (outcomes[0] == 5 && outcomes[1] == 5 || outcomes[0] == 5 && outcomes[2] ==5 || outcomes[1] == 5 && outcomes[2] == 5){
         screen_text = "+25 POINTS";
         score+= 25;

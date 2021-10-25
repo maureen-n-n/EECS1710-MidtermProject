@@ -17,9 +17,7 @@ void mousePressed(){
       restart();
       screen_text = "TRY AGAIN!";
     }
-   
   }  
-  
 }
 
 void restart(){
